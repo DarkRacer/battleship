@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-3">
+    <div class="container-fluid"> <button class="navbar-toggler navbar-toggler-right border-0 p-0" type="button" data-toggle="collapse" data-target="#navbar20">
+        <p class="navbar-brand text-white mb-0"> <i class="fa d-inline fa-lg fa-stop-circle"></i> Battle Ships </p>
+    </button>
+        <div class="collapse navbar-collapse" id="navbar20">
+            <p class="d-none d-md-block lead mb-1 text-white"> <i class="fa d-inline fa-lg fa-stop-circle"></i>
+                <a class="nav-link text-white" href="http://localhost:4200/"><b> Battle Ships</b></a> </p>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"> <a class="nav-link" href="http://localhost:4200/battleboard">Играть</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="http://localhost:4200/connect">Подключиться</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="http://localhost:4200/scoreTable">Таблица результатов</a> </li>
+            </ul>
+            </div>
+        <button class="btn mr-2" style="width: 250px" routerLink="/profile/{{user.id}}" *ngIf="isLoggedIn">
+            {{user.userName}}
+        </button>
+        <button class="btn" (click)="logout()" *ngIf="isLoggedIn">
+            Выйти
+        </button>
+        <button class="btn" routerLink="/login" *ngIf="!isLoggedIn">
+            Войти
+        </button>
+        </div>
+</nav>
+<router-outlet></router-outlet>
+

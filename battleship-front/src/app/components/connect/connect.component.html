@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="row height-100 d-flex justify-content-center align-items-center">
+        <div class="col-md-8">
+            <div class="search position-relative" [formGroup]="codeGroup">
+                <input class="form-control" placeholder="Код комнаты(.../...)" formControlName="code">
+                <button class="btn btn-primary position-absolute p-xl-1" (click)="connection()">Подключиться</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<div *ngIf="initDone==false" style="margin-left: 45%">
+    <button type="submit" class="btn btn-primary" (click)="newGame()">Начать</button>
+</div>
+<span *ngIf="opponentUserName" class="text-center" style="margin-left: 40%">Ваш противник:  {{opponentUserName}}</span>
+<div class="body">
+    <div class="leftContent">
+        <div class='leftCCon'>
+            <div *ngIf="initDone==true" class=theBoard>
+                <span style="padding-left: 100px">Ваше поле: </span>
+                <table class="battleshipBoard">
+                    <tr *ngFor="let r of boardLength" class="battleshipBoard">
+                        <td *ngFor="let c of boardLength" class="battleshipBoard battleCell"
+                            [attr.id]="'my'+r.toString()+c.toString()"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="rightContent">
+        <div class='leftCCon'>
+            <div *ngIf="initDone==true" class=theBoard>
+                <span *ngIf="opponentUserName">Поле {{opponentUserName}}</span>
+                <span *ngIf="!opponentUserName">Поле противника</span>
+                <table class="battleshipBoard">
+                    <tr *ngFor="let r of boardLength" class="battleshipBoard">
+                        <td *ngFor="let c of boardLength" class="battleshipBoard battleCell" (click)="onClick($event)"
+                            [attr.id]="'their'+r.toString()+c.toString()"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<nav class="navbar bg-primary" *ngIf="code">
+    <h4 class="link text-white" *ngIf="!opponentUserName" (click)="copyMessage(code)">Код комнаты: {{code}}</h4>
+    <h2 class="keepInCenter">{{currentMessage}}</h2>
+    <h2 *ngIf="ourTurn && gameover == false" class="keepInCenter">Твой ход</h2>
+    <h2 *ngIf="opponentUserName && !ourTurn && gameover == false" class="keepInCenter">Ожидание {{opponentUserName}}</h2>
+</nav>

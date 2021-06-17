@@ -1,0 +1,29 @@
+body {
+    background: #eee
+}
+
+.height-100 {
+    height: 100vh
+}
+
+.form-control {
+    height: 70px;
+    background-color: aliceblue;
+    font-size: 22px;
+    color: black;
+}
+
+.form-control:focus {
+    background-color: #c8e7ea;
+    box-shadow: none;
+    border: none;
+    color: black;
+}
+
+.search button {
+    top: 10px;
+    width: 120px;
+    height: 50px;
+    right: 10px;
+    font-size: 17px
+}

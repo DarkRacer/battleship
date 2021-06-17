@@ -1,0 +1,171 @@
+.line{
+    border-left: #2512a1;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
+}
+
+.ship1 {
+    background: #870657;
+}
+
+.ship2 {
+    background: #e8452d;
+}
+
+.ship3 {
+    background: #0069e3;
+}
+
+.ship4 {
+    background: #FFD847;
+}
+
+.attacked {
+    background-image: url(src/assets/images/point.png) !important;
+    background-size:100% 100%;
+}
+
+.keepInCenter{
+    width: auto !important;
+    height: 100px !important;
+    margin: auto auto !important;
+    color: antiquewhite;
+}
+
+.keepInCenter-bottom{
+    width: auto !important;
+    height: 40px !important;
+    margin: auto auto !important;
+    color: antiquewhite;
+}
+
+.footerText {
+    color: white;
+}
+table.battleshipBoard {
+    padding-top: 10%;
+    margin: auto;
+    background: lightgrey;
+    border: 5px solid #333;
+    border-collapse: collapse;
+}
+
+td.battleshipBoard {
+    width: 50px; height: 50px;
+    border: 2px solid #333;
+}
+td.battleCell {
+    border: 4px solid #333;
+}
+.test {
+    background: blue;
+}
+
+$accent1: #192441;
+$accent2: #ff4c11;
+$accent3: #f7f7f7;
+
+a {
+    link-appearance: none;
+    text-decoration: none;
+    color: white;
+
+}
+
+body {
+    padding: 0;
+    font-family: lato;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.nav {
+    height: 130px;
+    clear: both;
+    width: 100%;
+    background: #2512a1;
+}
+
+.navBottom {
+    height: 85px;
+    clear: both;
+    width: 100%;
+    background: #2512a1;
+}
+
+.theBoard{
+    span{
+        padding-left: 100px
+    }
+}
+
+.body {
+}
+
+.leftContent {
+    width: 50%;
+    float:left;
+}
+
+.login{
+    padding-top: 10%;
+    padding-bottom: 20%;
+}
+
+.leftCCon {
+
+    padding: 10px 50px;
+    align-items: center;
+
+    h1 {
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 1.7em;
+        color: rgba($accent1, 0.7);
+    }
+
+    p {
+        font-size: 0.7em;
+        text-transform: none;
+        letter-spacing: 0;
+        font-weight: 600;
+        color: rgba($accent1, 0.5);
+    }
+}
+
+.rightContent {
+    height: 100%;
+    float: right;
+    background-color: white;
+    width: 50%;
+}
+
+.attackedWithShip {
+    background-image: url(src/assets/images/danger.png) !important;
+    background-size:100% 100%;
+}
+
+.table1{
+    text-align: right;
+    text-decoration: none;
+    text-decoration-color: #91ced4;
+    display: inline-block;
+    padding-left:42%;
+    padding-right: 10px;
+    padding-top: 20px
+}
+
+.link{
+    a{
+        cursor: alias;
+    }
+    text-decoration-color: #91ced4;
+    text-align:left;
+    display: inline-block;
+    padding-left: 10px;
+    padding-right:35%;
+    padding-top: 20px
+}
